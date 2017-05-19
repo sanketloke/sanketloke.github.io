@@ -12,7 +12,7 @@ safe: true
 
 # edit here to achieve your personal greatness
 url: http://sanketloke.github.io/
-baseurl: /
+baseurl: http://sanketloke.github.io/
 title: Sanket Lokegaonkar
 author: Sanket Lokegaonkar
 description: Personal blog and resume
@@ -21,7 +21,8 @@ email: sloke@vt.edu
 github: sanketloke # username
 twitter: sanketloke94
 linkedin: sanketloke
-stackoverflow: username   #e.g: users/4380063/sloke
+stackoverflow: users/4380063/sloke
+facebook: sanket.lokegaonkar   #e.g: users/4380063/sloke
 #Comment out if you don't want disqus 
 #disqus: username
 google_analytics: UA-99360899-1
