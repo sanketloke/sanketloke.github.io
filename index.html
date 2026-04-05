@@ -1,86 +1,296 @@
 ---
-layout: home
+layout: layout
 ---
 
-<section id="about">
-	<div class="container">
-	  <div class="avatar">
-		<img class="img-rounded" src="{{ site.baseurl }}static/img/{{ site.avatar }}" alt="Responsive image">
-	  </div>
+<div class="page-layout">
 
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar">
+    <img class="sidebar-avatar"
+         src="{{ site.baseurl }}static/img/{{ site.avatar }}"
+         alt="{{ site.author }}">
 
-	  <div class="blogpost">
+    <div class="sidebar-name">{{ site.author }}</div>
+    <div class="sidebar-title">Senior Applied Scientist<br>Amazon &middot; Seattle, WA</div>
 
+    <div class="sidebar-section">
+      <div class="sidebar-label">Contact</div>
+      <div class="contact-links">
+        <a href="mailto:{{ site.email }}">
+          <i class="fa-solid fa-envelope"></i> {{ site.email }}
+        </a>
+        <a href="https://github.com/{{ site.github }}" target="_blank">
+          <i class="fa-brands fa-github"></i> github.com/{{ site.github }}
+        </a>
+        <a href="https://linkedin.com/in/{{ site.linkedin }}" target="_blank">
+          <i class="fa-brands fa-linkedin"></i> linkedin.com/in/{{ site.linkedin }}
+        </a>
+        <a href="https://scholar.google.com/citations?user=BIVZIAQAAAAJ" target="_blank">
+          <i class="fa-solid fa-graduation-cap"></i> Google Scholar
+        </a>
+      </div>
+    </div>
 
+    <div class="sidebar-section">
+      <div class="sidebar-label">Research Interests</div>
+      <div class="interest-tags">
+        <span class="interest-tag">LLMs</span>
+        <span class="interest-tag">Foundation Models</span>
+        <span class="interest-tag">Data Curation</span>
+        <span class="interest-tag">Scaling Laws</span>
+        <span class="interest-tag">Agentic AI</span>
+        <span class="interest-tag">Repr. Learning</span>
+        <span class="interest-tag">Deep Learning</span>
+      </div>
+    </div>
 
-	  <h2>
-	  About Me
-	  </h2>
+    <a href="{{ site.baseurl }}cv.pdf" class="cv-btn" target="_blank">
+      <i class="fa-solid fa-file-arrow-down"></i> Download CV
+    </a>
+  </aside>
 
-	  <hr>
-	  <h4>
-	  <div style="text-align:justify">
-		Hi there! I'm <strong>{{ site.author }}</strong>, currently a software engineer at Bloomberg. I graduated from Virginia Tech with Masters in Computer Science. As a masters student, I focused on computer vision research in <a href="https://filebox.ece.vt.edu/~jbhuang/people.html"> Prof. Jia-Bin's Vision and Learning Lab </a>.
-		  I was jointly advised by <a href="https://filebox.ece.vt.edu/~jbhuang/index.html">Prof. Jia-Bin Huang</a> and  <a href="http://people.cs.vt.edu/naren/">Prof. Naren Ramakrishnan </a>. My <a href="https://vtechworks.lib.vt.edu/handle/10919/83513"> thesis </a> focused on developing a new continual learning method to alleviate catastrophic forgetting in incremental pixel-wise/dense labeling problems.   </br> </br> 
-	  </div>
+  <!-- ===================== MAIN ===================== -->
+  <div class="main-content">
 
-<!-- 	 Strong research professional with development experience in multiple domains.  Masters in Computer Science focusing on Machine Learning/ Computer Vision from Virginia Tech.   Skilled in Algorithms, Python, Java, C, C++, Full Stack Development. Currently working on Object Tracking in Vision and VR in sports.
-For more info and blog: -->
-	  <h2>
-	  Timeline
-	  </h2>
-	  <hr>
+    <!-- About -->
+    <div class="section">
+      <h2 class="section-title">About</h2>
+      <p class="about-text">
+        I'm a Senior Applied Scientist at Amazon, and a founding member of the pre-training data team
+        for <strong>Amazon Rufus</strong> — a large-scale conversational AI shopping assistant powered
+        by frontier LLMs serving hundreds of millions of customers. I co-lead data strategy and training
+        methodology: data curation, scaling laws, training recipes, data mixture/curriculum design, and
+        productionization — shipping 5+ model generations (dense and MoE) with SOTA results on key
+        benchmarks.
+        <br><br>
+        My research interests span large language models, foundation model training, data-centric machine
+        learning, agentic mid-training, scaling laws, and representation learning. I have publications at
+        ICLR, NAACL, SIGGRAPH, and IEEE BigData.
+      </p>
+    </div>
 
+    <!-- Publications -->
+    <div class="section">
+      <h2 class="section-title">Publications</h2>
+      <div class="pub-list">
 
-	  <h4>
-	  <div style="text-align:justify" >
+        <div class="pub-item">
+          <span class="pub-badge badge-iclr">ICLR '26</span>
+          <div>
+            <div class="pub-title"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BIVZIAQAAAAJ&citation_for_view=BIVZIAQAAAAJ:W7OEmFMy1HYC" target="_blank">ByteFlow: Language Modeling through Adaptive Byte Compression without a Tokenizer</a></div>
+            <div class="pub-authors">C. Deng, <strong>S. Lokegaonkar</strong>, C. Lockard, B. Fetahu, N. Zalmout, X. Li.</div>
+          </div>
+        </div>
 
-	  <!-- Since Spring 2017,  </br> </br> -->
-	
-	  Fall 2018 : Joined Bloomberg as a Software Engineer!! </br> </br>
+        <div class="pub-item">
+          <span class="pub-badge badge-naacl">NAACL '25</span>
+          <div>
+            <div class="pub-title"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BIVZIAQAAAAJ&citation_for_view=BIVZIAQAAAAJ:IjCSPb-OGe4C" target="_blank">Hephaestus: Improving Fundamental Agent Capabilities of LLMs through Continual Pre-Training</a></div>
+            <div class="pub-authors">Y. Zhuang, J. Yang, H. Jiang, X. Liu, K. Cheng, <strong>S. Lokegaonkar</strong>, et al.</div>
+          </div>
+        </div>
 
-	  Spring 2018 : Graduated!!! Woohoo!! <a href="https://vtechworks.lib.vt.edu/handle/10919/83513"> Thesis : Continual Learning for Deep Dense Prediction	  </a> </br> </br>
+        <div class="pub-item">
+          <span class="pub-badge badge-pre">EMNLP '25</span>
+          <div>
+            <div class="pub-title"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BIVZIAQAAAAJ&citation_for_view=BIVZIAQAAAAJ:zYLM7Y9cAGgC" target="_blank">DocTalk: Scalable Graph-Based Dialogue Synthesis for LLM Conversational Capabilities</a></div>
+            <div class="pub-authors">J.Y. Lee, H. Bonab, N. Zalmout, M. Zeng, <strong>S. Lokegaonkar</strong>, et al.</div>
+          </div>
+        </div>
 
-	  Fall 2017 : Research Assistant under Prof. Jia-Bin. Developed the photogrammetry and iterative 3D reconstruction workflow for <a href="https://icat.vt.edu/icat_projects/source-form/">Source Form</a>, a tool to generate/print
-	   3D models from subjective textual user input. </br> </br>
+        <div class="pub-item">
+          <span class="pub-badge badge-pre">EMNLP '25</span>
+          <div>
+            <div class="pub-title"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BIVZIAQAAAAJ&citation_for_view=BIVZIAQAAAAJ:Tyk-4Ss8FVUC" target="_blank">UniFilter: Unified Multimodal Data Quality Classifier with Synthetic Data</a></div>
+            <div class="pub-authors">W. Wang, R. Lin, S. Li, C. Lockard, R. Sarkhel, <strong>S. Lokegaonkar</strong>, et al.</div>
+          </div>
+        </div>
 
-	  Fall 2017 : Proposed and developed constrained joint matrix factorization approach for game and user recommendation engine on <a href="https://steam.internet.byu.edu/">Steam gaming dataset </a> . Extended the algorithm for MapReduce Framework. </br> </br>
+        <div class="pub-item">
+          <span class="pub-badge badge-sig">SIGGRAPH '19</span>
+          <div>
+            <div class="pub-title"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BIVZIAQAAAAJ&citation_for_view=BIVZIAQAAAAJ:2osOgNQ5qMEC" target="_blank">SourceForm: An Automated Crowdsourced Object Generator</a></div>
+            <div class="pub-authors">S. Blanchard, J.B. Huang, C.B. Williams, V. Meenakshisundaram, J. Kubalak, <strong>S. Lokegaonkar</strong>.</div>
+          </div>
+        </div>
 
-	  Summer 2017: Research Assistant under Prof. Naren at <a href="https://dac.cs.vt.edu/">Discovery Analytics Center</a> and <a href="https://www.vtti.vt.edu/">Virginia Tech Transportation Institute</a>. Analyzed and developed methods to detect driver fatigue/drowsiness and identify distracted drivers, using
-	  dash-cam video and car sensors. </br> </br>
+        <div class="pub-item">
+          <span class="pub-badge badge-bd">BigData '18</span>
+          <div>
+            <div class="pub-title"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BIVZIAQAAAAJ&citation_for_view=BIVZIAQAAAAJ:d1gkVwhDpl0C" target="_blank">Identifying Distracted and Drowsy Drivers Using Naturalistic Driving Data</a></div>
+            <div class="pub-authors">S. Yadawadkar, B. Mayer, <strong>S. Lokegaonkar</strong>, M.R. Islam, N. Ramakrishnan, et al.</div>
+          </div>
+        </div>
 
-	  Spring 2017 : Researched on possible improvements for siamese neural nets based visual tracking in videos with <a href="https://filebox.ece.vt.edu/~jbhuang/index.html">Prof. Jia-Bin Huang</a>. </br> </br>
+        <div class="pub-item">
+          <span class="pub-badge badge-ijcai">IJCAI '16</span>
+          <div>
+            <div class="pub-title"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BIVZIAQAAAAJ&citation_for_view=BIVZIAQAAAAJ:qjMakFHDy7sC" target="_blank">Building Complementary Domain Taxonomies using Query Enrichment</a> <span style="font-size:11px;color:#9ca3af;font-weight:400;">(Workshop)</span></div>
+            <div class="pub-authors">S.S. Shah, S. Bhattad, <strong>S. Lokegaonkar</strong>, G. Ramakrishnan.</div>
+          </div>
+        </div>
 
-	  Spring 2017 : Developed the first prototype for American football <a href=""></a>quarterback virtual reality/training environment
-	  in a camera-tracked space (The Cube), with <a href="https://research.cs.vt.edu/3di/user/123" >Prof. Doug Bowman</a>. 
-	  Checkout the awesome demo <a href="https://icat.vt.edu/icat_projects/embodied-virtual-reality-for-training-and-performance/">here</a>. </br></br>
+      </div>
+    </div>
 
-	  Spring 2017 : Teaching assistant for CS 3714: Mobile Software Development at VT. </br> </br>
+    <!-- Experience -->
+    <div class="section">
+      <h2 class="section-title">Experience</h2>
+      <div class="exp-list">
 
-	  Fall 2016 : Researched and developed approches to learn deep agents on half-field offense task in a multi-agent soccer environment. The approach builds on the model by He, et al. "Opponent Modeling in Deep Reinforcement Learning". [<a href="https://github.com/sanketloke/dlmultiagentsoccer">Keras codebase</a>] [For more info, checkout the  <a href="http://www.cs.utexas.edu/~larg/hausknecht_thesis/slides/thesis.pdf"> thesis </a> by Matthew Hausknecht] </br> </br>
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-company">Amazon &mdash; Rufus</span>
+            <span class="exp-dates">2021 &ndash; Present &middot; Seattle, WA</span>
+          </div>
+          <div class="exp-role">Senior Applied Scientist</div>
+          <div class="exp-desc">Founding member of the pre-training data team for Amazon Rufus, a conversational AI shopping assistant powered by frontier LLMs. Co-led data strategy, training recipes, and data mixture/curriculum design across 5+ model generations (dense and MoE). Previously built DataKit — distributed dataset management and checkpointing infrastructure for large-scale model training — as SDE-II.</div>
+        </div>
 
-	  Fall 2016 : Collaborated with <a href="http://people.cs.vt.edu/yuec/">Yue Cheng </a>, <a href="http://pratikone.github.io">Pratik Anand </a>, <a href="https://github.com/richasinha">Richa Sinha </a> and <a href="http://people.cs.vt.edu/butta/">Prof. Ali.R.Butt </a> , to develop optimizations in Redis targeted for reduction in memory usage for Redis, a key-value store database. [<a href="https://drive.google.com/file/d/0B-1YMXpvmqLBUlBGay1YUXhPM0k/view">report </a>] [<a href="https://github.com/sanketloke/redis">code </a>]  </br> </br> 
-	
-	  Fall 2016 : Joined Virginia Tech for M.S in Computer Science. </br> </br>
-	
-	  Fall 2015 - Spring 2016 : Research intern at Indian Institute of Technology, Bombay, in collaboration with <a href="https://www.cse.iitb.ac.in/~ganesh/">Ganesh Ramakrishnan</a>. 
-	  Worked on developing a <a href="http://cognitum.ws/wp-content/uploads/2016/06/ShahBhattadLokegaonkarRamakrishnan2016.pdf">domain-agnostic framework for building and evolving a taxonomy. </a>
-	  Core contributor to development of web application and mobile application (Lokavidya) focusing on content aggregation, 
-	  collaborative content creation and dissemination of informational multimedia content in rural India.[<a href="http://ruralict.wixsite.com/iitb/lokacart"> Lokacart </a> ] [ <a href="http://ruralict.wixsite.com/iitb/lokavidya"> Lokavidya </a>  ] </br> </br>
-	  
-	  Spring 2015 : Graduated from University of Mumbai with Bachelors!!
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-company">Amazon Web Services</span>
+            <span class="exp-dates">2020 &ndash; 2021 &middot; Seattle, WA</span>
+          </div>
+          <div class="exp-role">Software Development Engineer</div>
+          <div class="exp-desc">Scaled distributed configuration tracking and change management services for AWS Config, supporting compliance auditing and resource inventory across millions of cloud resources.</div>
+        </div>
 
-	  <h2>
-	  Fun
-	  </h2>
-	  <hr>
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-company">Uber Advanced Technologies Group</span>
+            <span class="exp-dates">2019 &ndash; 2020 &middot; Pittsburgh, PA</span>
+          </div>
+          <div class="exp-role">Software Engineer</div>
+          <div class="exp-desc">Integrated learned behavior prediction models into the motion planning stack for autonomous vehicles. Developed autoregressive probabilistic flow models for multi-agent trajectory forecasting in complex urban environments.</div>
+        </div>
 
-	  <h4> Outside of work, I enjoy hiking, climbing, improv comedy, volunteering, competitive programming,  hacking stuff over the weekend and contributing to open source .</h4>
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-company">Bloomberg L.P.</span>
+            <span class="exp-dates">2018 &ndash; 2019 &middot; New York, NY</span>
+          </div>
+          <div class="exp-role">Software Engineer</div>
+          <div class="exp-desc">Built real-time distributed rules engine in Spark/Storm for regulatory transaction monitoring, processing thousands of transactions per minute. Developed algorithmic trading analytics workflows for Bloomberg Terminal.</div>
+        </div>
 
-	  <h4>
-	</div>
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-company">Virginia Tech &mdash; Vision &amp; Learning Lab</span>
+            <span class="exp-dates">2017 &ndash; 2018 &middot; Blacksburg, VA</span>
+          </div>
+          <div class="exp-role">Research Assistant &middot; Advisor: Prof. Jia-Bin Huang</div>
+          <div class="exp-desc">MS thesis on continual learning for semantic segmentation: mitigating catastrophic forgetting via weight regularization and knowledge distillation. Built photogrammetry pipeline for crowdsourced 3D reconstruction (SIGGRAPH '19).</div>
+        </div>
 
-	{% include social.html %}
-	</div>
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-company">Discovery Analytics Center, Virginia Tech</span>
+            <span class="exp-dates">Summer 2017 &middot; Blacksburg, VA</span>
+          </div>
+          <div class="exp-role">Research Assistant &middot; Advisor: Prof. Naren Ramakrishnan</div>
+          <div class="exp-desc">Developed driver state detection combining face tracking, vehicle telemetry, and recurrent models on naturalistic driving data (IEEE BigData '18).</div>
+        </div>
 
-</section>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="edu-list">
+
+        <div class="edu-item">
+          <div class="edu-header">
+            <span class="edu-school">Virginia Tech</span>
+            <span class="edu-dates">2016 &ndash; 2018</span>
+          </div>
+          <div class="edu-degree">M.S. Computer Science &middot; Blacksburg, VA</div>
+          <div class="edu-thesis">Thesis: Continual Learning for Deep Dense Prediction. Advisor: Prof. Jia-Bin Huang.</div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-header">
+            <span class="edu-school">University of Mumbai</span>
+            <span class="edu-dates">2011 &ndash; 2015</span>
+          </div>
+          <div class="edu-degree">B.E. Computer Engineering &middot; Mumbai, India</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Outside of work -->
+    <div class="section">
+      <h2 class="section-title">Outside of Work</h2>
+      <p class="about-text">When I'm not at a computer either working or gaming, I like to be outside — bouldering, top-roping, and slowly working my way into more alpine terrain. I read a lot when time permits-  science fiction and fantasy for the imagination, non-fiction for everything else. I'm starting to develop my drawing and painting.</p>
+    </div>
+
+    <!-- Technical Skills -->
+    <div class="section">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-list">
+        <div class="skills-item">
+          <span class="skills-category">ML</span>
+          <span class="skills-detail">PyTorch, large-scale distributed LLM training, MoE architectures, vLLM</span>
+        </div>
+        <div class="skills-item">
+          <span class="skills-category">Data</span>
+          <span class="skills-detail">Spark, web-scale data curation and processing pipelines</span>
+        </div>
+        <div class="skills-item">
+          <span class="skills-category">Languages</span>
+          <span class="skills-detail">Python, C/C++, Java, SQL</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog -->
+    <div class="section">
+      <h2 class="section-title">Blog</h2>
+      {% if site.posts.size > 0 %}
+      <div class="blog-preview-list">
+        {% for post in site.posts limit:3 %}
+        <a class="blog-preview-item" href="{{ site.baseurl }}{{ post.url }}">
+          <span class="blog-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <div>
+            <div class="blog-preview-title">{{ post.title }}</div>
+            {% if post.excerpt %}
+            <div class="blog-preview-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</div>
+            {% endif %}
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+      <a href="{{ site.baseurl }}blog.html" class="view-all-link">View all posts &rarr;</a>
+      {% else %}
+      <p style="font-size:14px;color:#9ca3af;">Posts coming soon — research notes, paper reviews, and ML deep-dives.</p>
+      {% endif %}
+    </div>
+
+    <!-- Photography -->
+    <div class="section">
+      <h2 class="section-title">Photography</h2>
+      <p style="font-size:13.5px;color:#6b7280;margin-bottom:16px;line-height:1.6;">Mountains, rock, and the places in between.</p>
+      <div class="photo-preview-grid">
+        <a class="photo-preview-card" href="{{ site.baseurl }}photography.html">
+          <div class="photo-preview-img-wrap">
+            <img src="{{ site.baseurl }}static/img/photos/climbing-1.jpg" alt="Climbing">
+          </div>
+        </a>
+        <a class="photo-preview-card" href="{{ site.baseurl }}photography.html">
+          <div class="photo-preview-img-wrap">
+            <img src="{{ site.baseurl }}static/img/photos/climbing-2.jpg" alt="Mountain">
+          </div>
+        </a>
+        <a class="photo-preview-card" href="{{ site.baseurl }}photography.html">
+          <div class="photo-preview-img-wrap">
+            <img src="{{ site.baseurl }}static/img/photos/landscape-1.jpg" alt="Landscape">
+          </div>
+        </a>
+      </div>
+      <a href="{{ site.baseurl }}photography.html" class="view-all-link">View all photos &rarr;</a>
+    </div>
+
+  </div><!-- /.main-content -->
+</div><!-- /.page-layout -->
